@@ -1,0 +1,25 @@
+import axios from 'axios';
+import { useQuery } from '@tanstack/react-query';
+
+// 1️⃣ دالة لجلب بيانات المدير
+export async function getSallerPromotions() {
+  try {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/coupon/vendor`,{
+              headers:{
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+        }
+    });
+    return res.data; // Axios يحط البيانات مباشرة في res.data
+  } catch (error) {
+    // Axios يحط الخطأ في response أو message
+    const message = error.response?.data?.message || error.message ;
+  }
+}
+
+// 2️⃣ Hook لاستخدام React Query
+export function useFetchSallerPromotions(options = {}) {
+  return useQuery(['fetch-Saller-Promotions'], getSallerPromotions, options);
+}
+
+// 3️⃣ تصدير افتراضي
+export default getSallerPromotions;
