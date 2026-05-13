@@ -68,11 +68,11 @@ import LayoutClient from '../layouts/LayoutClient';
 import DeliveryStatistics from '../delivery/DeliveryStatistics';
 import OrderPageDetails from '../saller/OrderPageDetails';
 import ChatPage from '../admin/ChatPage';
-import Ads from '../admin/setting/Ads';
 import Mart from '../admin/setting/Mart';
 import InvitationSystem from '../admin/setting/InvitationSystem';
 import DeliverySystem from '../admin/setting/DeliverySystem';
 import Integrations from '../admin/setting/Integrations';
+import AdsDashboard from '../admin/setting/Ads';
 
 const router = createBrowserRouter([
   { path: '/admin/login', element: <AdminLogin /> },
@@ -161,7 +161,7 @@ const router = createBrowserRouter([
           { path: "analytics", element: <AnalyticsDashboard /> },
           { path: "disputes", element: <DisputesManagement /> },
           { path: "setting", element: <Settings /> },
-          { path: "setting/general", element: <Ads /> },
+          { path: "setting/general", element: <AdsDashboard /> },
           { path: "setting/mart", element: <Mart /> },
           { path: "setting/integrations", element: <Integrations /> },
           { path: "setting/invitation-system", element: <InvitationSystem /> },

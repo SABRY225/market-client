@@ -17,7 +17,6 @@ Add Tailwind CSS
 This scaffold now includes Tailwind config files. To enable Tailwind locally run:
 
 ```powershell
-cd 'f:\بيزنيس\معلمي\frontend'
 npm install
 # If you haven't already installed Tailwind deps (they're in package.json), run:
 # npm install -D tailwindcss postcss autoprefixer
