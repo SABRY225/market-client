@@ -71,7 +71,7 @@ import ChatPage from '../admin/ChatPage';
 import Mart from '../admin/setting/Mart';
 import InvitationSystem from '../admin/setting/InvitationSystem';
 import DeliverySystem from '../admin/setting/DeliverySystem';
-import Integrations from '../admin/setting/Integrations';
+import Rewards from '../admin/setting/Rewards';
 import AdsDashboard from '../admin/setting/Ads';
 
 const router = createBrowserRouter([
@@ -163,7 +163,7 @@ const router = createBrowserRouter([
           { path: "setting", element: <Settings /> },
           { path: "setting/general", element: <AdsDashboard /> },
           { path: "setting/mart", element: <Mart /> },
-          { path: "setting/integrations", element: <Integrations /> },
+          { path: "setting/integrations", element: <Rewards /> },
           { path: "setting/invitation-system", element: <InvitationSystem /> },
           { path: "setting/delivery-system", element: <DeliverySystem /> },
 
